@@ -10,12 +10,15 @@ import { SignupPopupComponent } from './signup-popup/signup-popup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './share.service';
 import { FormsModule } from '@angular/forms';
+import { CarOverviewComponent } from './car-overview/car-overview.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderandfooterComponent,
     SidebarComponent,
     SignupPopupComponent,
+    CarOverviewComponent,
     
    
   ],

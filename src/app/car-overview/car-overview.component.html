@@ -1,0 +1,124 @@
+<html>
+    <body>
+        <div class="container">
+            <div class="inner-container">
+             <div class="navigate">
+                <a>Home ></a>
+                <a>Used cars ></a>
+                <a>Hyundai i20</a>
+             </div>
+             <div class="car-details">
+                <div class="brand-name">Hyundai i20</div>
+                <div class="variant">Magna 1.2 MT</div>
+             </div>
+             <div class="overview-container">
+                <div class="car-image">
+                    <div [style.background-image]="'url(' + getActiveImageUrl() + ')'" class="overview-carimage">
+                      <img style="cursor: pointer;" src="../../assets/leftarrow.svg" (click)="showPrevImage()">
+                      <img style="cursor: pointer;" src="../../assets/rightarrow.svg" (click)="showNextImage()">
+                    </div>
+                    <div class="overview-list">
+                      <div class="smallcard" *ngFor="let smallImageUrl of imageUrls; let i = index" [class.active]="activeIndex === i" (click)="setActiveImage(i)">
+                        <img [src]="smallImageUrl" id="small-img" alt="Image">
+                      </div>
+                    </div>
+                  </div>
+                <div class="rateandaddress">
+                    <div class="rate">
+                         <div class="amount">₹450000</div>
+                         <div class="two-button">
+                            <div class="contactseller-button">
+                                <img src="../../assets/phone-icon1.svg">
+                                <span>Contact seller</span>
+                            </div>
+                            <div class="testdrive-button">
+                               <img src="../../assets/test-drive.svg">
+                               <span>Schedule test drive</span>
+                            </div>
+                         </div>
+                         <div class="homedelivery">
+                            <img src="../../assets/homedelivery.svg">
+                            <span>Home delivery available</span>
+                         </div>
+                         <div class="storelocation">
+                            <img src="../../assets/storelocation.svg">
+                            <span>Available at Store</span>
+                         </div>
+                         <div class="door-address">433, USTAD AMIR KHAN SARANI, Kolkata, Kolkata, West Bengal</div>
+                         <button>View all cars at this store</button>
+                    </div>
+                    <div class="title">Specification</div>
+                    <div class="specification">
+                        <table class="my-table">
+                            <tr>
+                              <th>Mileage</th>
+                              <th>Cylinders</th>
+                              <th>Max power</th>
+                            </tr>
+                            <tr>
+                              <td>12 Kmpl</td>
+                              <td>6</td>
+                              <td>bhp</td>
+                            </tr>
+                            <tr>
+                                <th>Torque</th>
+                                <th>Seats</th>
+                                <th>Color</th>
+                              </tr>
+                            <tr>
+                              <td>Nm</td>
+                              <td>4</td>
+                              <td>Red</td>
+                            </tr>
+                          </table>
+                    </div>
+                    <div class="sharing">
+                        <img style="cursor: pointer;" src="../../assets/share.svg">&nbsp;&nbsp;
+                        <span style="cursor: pointer;">Share</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img style="cursor: pointer;" src="../../assets/flag.svg">&nbsp;&nbsp;
+                        <span style="cursor: pointer;">Report a problem</span>
+                    </div>
+                   
+                </div>
+             </div>
+            </div>
+            <div class="car-details-1">
+                <div class="title-1">Car Details</div>
+                <div class="detail-table">
+                    <table class="my-table">
+                        <tr>
+                          <th>City</th>
+                          <th>Km Driven</th>
+                          <th>Owner’s</th>
+                        </tr>
+                        <tr>
+                          <td>Kolkata</td>
+                          <td>92000</td>
+                          <td>Fourth owner</td>
+                        </tr>
+                        <tr>
+                            <th>Registration year</th>
+                            <th>Fuel type</th>
+                            <th>Engine</th>
+                          </tr>
+                        <tr>
+                          <td>2008</td>
+                          <td>Petrol</td>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Transmission</th>
+                            <th>No objection certificate</th>
+                            <th>Manufacturing year</th>
+                          </tr>
+                        <tr>
+                          <td>Manual</td>
+                          <td>No</td>
+                          <td>2008</td>
+                        </tr>
+                      </table>
+                </div>
+          </div>
+        </div>
+    </body>
+</html>

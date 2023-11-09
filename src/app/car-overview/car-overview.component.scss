@@ -1,0 +1,274 @@
+.container{
+    width:100%;
+    height: auto;
+    box-sizing: border-box;
+  
+}
+.inner-container{
+    width:100%;
+    height:100%;
+    background: #F0F0F0; 
+    padding:40px 100px 40px 100px;
+    box-sizing: border-box;
+}
+.navigate{
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    box-sizing: border-box;
+}
+
+.car-details{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    box-sizing: border-box;
+}
+.brand-name{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+.variant{
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+.overview-container{
+    width:100%;
+    height:650px;
+    box-sizing: border-box;
+    display: flex;
+    gap:15px;
+}
+.car-image{
+    width:60%;
+    height:800px;
+    
+   
+}
+.rateandaddress{
+    width:40%;
+    height: 800px;
+   
+   
+}
+.overview-carimage{
+    width:100%;
+    height:550px;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.overview-list{
+    width:100%;
+    height:auto;
+    display: flex;
+    overflow-y: auto; 
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+    padding:10px 10px 10px 0px;
+    gap:10px;
+    box-sizing: border-box;
+    
+}
+.overview-list::-webkit-scrollbar {
+    display: none; 
+  }
+.smallcard{
+    width: 115px;
+    height: 80px;
+    flex: 0 0 auto;
+   align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+
+.smallcard.active {
+  border-color:#343A40;
+
+}
+
+.rate{
+    display: flex;
+    width: 100%;
+    padding:50px 50px 50px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    border-radius: 15px;
+background: #E2E2E2;
+font-size: 14px;
+box-sizing: border-box;
+}
+.specification{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border-radius: 15px;
+background: #E2E2E2;
+box-sizing: border-box;
+}
+.amount{
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+}
+.contactseller-button{
+    width: 50%;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+background: #1E2020;
+box-sizing: border-box;
+cursor: pointer;
+}
+.testdrive-button{
+    width:50%;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+background: #1E2020;
+box-sizing: border-box;
+cursor: pointer;
+}
+.two-button{
+    display: flex;
+    width:100%;
+    gap:10px;
+    color:white;
+}
+.homedelivery{
+    width:100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    font-size: 16px;
+font-style: normal;
+font-weight: 500;
+}
+.storelocation{
+    width:100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    font-size: 16px;
+font-style: normal;
+font-weight: 500;
+}
+.door-address{
+    width:100%;
+    text-wrap: wrap;
+    line-height:25px;
+    font-size: 14px;
+font-style: normal;
+font-weight: 400;
+}
+button{
+    color: #FFF;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+padding: 12px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+border-radius: 5px;
+background: #1E2020;
+width: 100%;
+border:none;
+cursor: pointer;
+}
+.my-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .my-table th, .my-table td {
+    
+    padding: 8px;
+    text-align: center;
+  }
+  .my-table th{
+    color: #151516;
+ font-size: 16px;
+font-style: normal;
+font-weight: 600;
+  }
+  .my-table td{
+    color: #151516;
+    font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+  }
+.title{
+    width: 100%;
+    padding:15px;
+    color: #000;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+flex: 1 0 0
+} 
+.sharing{
+    width: 100%;
+    padding:15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.car-details-1{
+    width:100%;
+    height:417px;
+    display: flex;
+    padding:40px 100px 40px 100px;
+flex-direction: column;
+align-items: flex-start;
+gap: 25px;
+align-self: stretch;
+}
+.title-1{
+    font-size: 24px;
+font-style: normal;
+font-weight: 600;
+
+}
+.detail-table{
+    display: flex;
+width: 40%;
+padding: 20px;
+flex-direction: column;
+align-items: center;
+gap: 35px;
+border-radius: 15px;
+background: #E2E2E2;
+}
