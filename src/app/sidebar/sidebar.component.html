@@ -1,0 +1,46 @@
+<html>
+
+<body>
+    <div id="mySidenav" class="sidenav" [ngStyle]="{'width': sidebarWidth}">
+        <div class="inner-nav">
+        <div class="nav-header">
+            <span id="account">
+                <img id="man" src="../../assets/logo.svg">
+              
+            </span>
+            <div href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</div>
+        </div>
+
+<div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>Home</a>
+        </div>
+ 
+        <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>Buy Car</a>
+        </div>
+    
+        <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+            <a href="javascript:void(0)">Sell Car</a>
+        </div>
+        <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>Live Auction</a>
+    </div>
+    <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a>98049 06860</a>
+    </div>
+    <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a (click)="openQuickViewDialog('Dealer')">Dealer Sign In / Sign Up</a>
+    </div>
+    <div style="display: flex; align-items:center;cursor: pointer;border-top: 0.2px solid #ADB5BD;">
+        <a (click)="openQuickViewDialog('Customer')" >Customer Sign In / Sign Up</a>
+    </div>
+
+    
+       
+        </div>
+    </div>
+    <span  style="font-size:24px;cursor:pointer;color:white;" (click)="openNav()">&#9776;</span>
+
+</body>
+
+</html>

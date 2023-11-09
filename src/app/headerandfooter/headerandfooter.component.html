@@ -1,0 +1,113 @@
+<html>
+    <body>
+
+        <div class="main-box">
+             <div class="header">
+               <div class="logo-section">
+                <img id="logo" src="../../assets/logo.svg">
+               </div>
+               <span id="sidebar-icon"><app-sidebar></app-sidebar></span>
+               <div class="menu-bar">
+                <a>Home</a>
+                <a>Buy car</a>
+                <a>Sell car</a>
+                <span id="live-action">
+                    <img  src="../../assets/liveaction-icon.svg">
+                    <a>Live Auction</a>
+                </span>
+               </div>
+               <div class="contactandsignup">
+                <span id="live-action">
+                    <img src="../../assets/phone-icon.svg">
+                    <span>+91 98049 06860</span>
+                </span>
+                <span  (click)="toggleDropdown()" id="live-action">
+                    <img src="../../assets/signup-icon.svg">
+                    <div class="dropdown">
+                        <a style="cursor: pointer;">Signup
+                        </a>
+                        <div  *ngIf="isDropdownOpen" class="dropdown-content">
+                          <a  (click)="openQuickViewDialog('Dealer')" id="live-action">
+                            <img src="../../assets/dealer.svg">
+                            <span >Dealer Sign In / Sign Up</span>
+                           
+                        </a>
+                          <a  (click)="openQuickViewDialog('Customer')" id="live-action">
+                            <img src="../../assets/customer.svg">
+                            <span>Customer Sign In / Sign Up</span>
+                        </a>
+
+                        </div>
+                      </div> 
+                </span>
+               </div>
+             </div>
+
+
+             
+       <div class="content"> <ng-content>
+            
+        </ng-content></div>
+       
+
+
+        <div class="footer">
+            <div class="foot-1">
+                 <div class="site-details">
+                    <img id="foot-logo" src="../../assets/logo.svg">
+                    <p style=" line-height: 20px;">Selling or buying a used car can often be a daunting task. The process can be time-consuming; that's where Flikcar comes in. We offer a hassle-free experience for selling and buying used cars.</p>
+                    <p style=" line-height: 20px;">Flikcar accepts cars of all makes, models, and conditions. Whether it's a hatchback, sedan, SUV, or luxury car, Flikcar is ready to evaluate and make an offer.</p>
+                 </div>
+                 <div class="overview">
+                    <span style="font-size: 22px;color:white">Overview</span>
+                    <a>Aboutus</a>
+                    <a >FAQ’s</a>
+                    <a >Privacy policy</a>
+                    <a >Terms & conditions</a>
+                 </div>
+                 <div class="car-brand">
+                    <div id="popular-car">
+                        <span id="popularcar-title1">Popular cars</span>
+                        <p style="font-size: 14px;">
+                            Kwid | Triber | Dzire | Alto | Venue | Amaze | <br><br>
+                            Swift | XUV700 | Aura | Baleno | Tigor | Kigor | <br><br>
+                            Grand i10 Nios | Creta | Verna | Celerio |
+                        </p>
+                    </div>
+                    <div id="popular-carbrand">
+                        <span id="popularcar-title2">Popular Car Brands</span>
+                        <p style="font-size: 14px;">
+                            Maruti Suzuki | Hyundai | Honda | Tata | <br><br>
+
+                            Toyota | Volkswagen | Mahindra |
+                        </p>
+                    </div>
+                 </div>
+                 <div class="contactus">
+                    <span style="font-size:22px;color:white;">Contact with us</span>
+                    <a id="live-action">
+                        <img style="width:20px;height: 20px;" src="../../assets/phone-icon.svg">
+                        <span>+91 98049 06860</span>
+                    </a>
+                    <a id="live-action">
+                        <img src="../../assets/email-icon.svg">
+                        <p>helpflikcar.com</p>
+                    </a>
+                    <a id="live-action">
+                        <img src="../../assets/insta-icon.svg">
+                        <img src="../../assets/X-icon.svg">
+                        <img src="../../assets/fb-icon.svg">
+                        <img src="../../assets/youtube-icon.svg"> 
+                    </a>
+                 </div>
+            </div>
+            <hr>
+           <div class="foot-2">
+              <div style="display:flex;align-items: center;justify-content:center;"><img src="../../assets/copyright-icon.svg">
+                 <p id="copy-right">2023. www.flikcar.com | Visitor Agreement  & Privacy Policy</p></div>
+           </div>
+        </div>
+        </div>
+    </body>
+</html>
+ 

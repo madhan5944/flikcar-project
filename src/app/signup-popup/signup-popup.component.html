@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <div class="container">
+        <div class="main-box">
+            <div class="box1">
+               <img id="pop-car" src="../../assets/popcar.svg">
+            </div>
+            <div class="box2">
+             <div id="cancel"><img (click)="onCancelClick()" style="cursor: pointer;" src="../../assets/cancel-icon.svg"></div>  
+             <div id="pop-logo"><img src="../../assets/poplogo.svg"></div>
+            <div class="content">
+             <p style="font-size: 14px;">SignIn/SignUp as</p>
+             <span style="font-size: 22px;font-weight: bold;height:10px;">{{heading}}</span>
+             
+             <p  *ngIf="showPhoneNumberSection" style="font-size: 16px;">Phone Number *</p>
+               <input *ngIf="showPhoneNumberSection"  type="number">
+              <!-- OTP-section -->
+              <div *ngIf="!showPhoneNumberSection" class="otp-section">
+                <p style="font-size: 16px;">Enter OTP</p>
+                <div class="otp-input-container">
+                    <input type="tel" [(ngModel)]="otp[0]" (input)="onOtpChange()" maxlength="1">
+                    <input type="tel" [(ngModel)]="otp[1]" (input)="onOtpChange()" maxlength="1">
+                    <input type="tel" [(ngModel)]="otp[2]" (input)="onOtpChange()" maxlength="1">
+                    <input type="tel" [(ngModel)]="otp[3]" (input)="onOtpChange()" maxlength="1">
+                    <input type="tel" [(ngModel)]="otp[4]" (input)="onOtpChange()" maxlength="1">
+                    <input type="tel" [(ngModel)]="otp[5]" (input)="onOtpChange()" maxlength="1">
+                  </div>
+                <span style="display: flex;
+                font-size:12px;width:100%;align-items: end;justify-content: end;">{{ countdown }}s</span>
+              </div>
+             <button  (click)="onGetOtpClick()">Get OTP</button>
+            
+             <p style="font-size: 15px;font-weight: 500;">By registering you agree to <span style="color: #40916C;font-weight: 600;"> Terms of service </span>
+                and<span  style="color: #40916C;font-weight: 600;"> Privacy policy</span></p>
+                         
+  
+        </div>
+            </div>
+
+   
+        </div>
+    </div>
+    </body>
+</html>

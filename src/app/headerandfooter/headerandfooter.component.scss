@@ -1,0 +1,230 @@
+body{
+    font-family: 'Cabin';
+}
+.main-box {
+        width: 100%;
+        height: auto;
+      }
+ .header {
+        width: 100%;
+        height:70px;
+        background-color:#000;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        position: fixed;
+         z-index: 2;
+         padding:40px;
+         box-sizing: border-box;
+    } 
+   .logo-section{
+    width:270px;
+    height:70px;
+    display: flex;
+    align-items: center;
+   }  
+   .menu-bar{
+    width:350px;
+    height:70px;
+    display: flex;
+    align-items: center;
+    color:white;
+    gap:22px;
+    font-size: 16px;
+}
+ .contactandsignup{
+        width:270px;
+        height:70px;
+        color:white;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+       gap:22px;
+       
+    }
+    #live-action{
+        display:flex;
+        align-items:center;
+        gap:8px;
+       box-sizing: border-box;
+       text-wrap: wrap;
+    }
+#sidebar-icon{
+    display: none;
+    
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .dropdown  {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 0px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+//   .navbar a:hover, .dropdown:hover  {
+//     background-color: red;
+//   }
+  
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: translate(-75%, 20%);
+    z-index: 1;
+    box-sizing: border-box;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+
+// content
+
+.content{
+    padding: 30px;
+}
+
+// footer
+
+.footer{
+    width:100%;
+    height:auto;
+    padding:40px;
+    background-color:black;
+    box-sizing: border-box;
+}
+.foot-1{
+    width: 100%;
+    height:425px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+#foot-logo{
+width:80px;
+height:50px;
+
+
+}
+.site-details{
+    width:306px;
+    height:260px;
+    color: #DEE2E6;
+    display: flex;
+    flex-direction: column;
+}
+.overview{
+    width:130px;
+    height:260px;
+    color: #DEE2E6;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    box-sizing: border-box;
+}
+.car-brand{
+    width:325px;
+    height: 260px;
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+color: #DEE2E6;
+box-sizing: border-box;
+}
+.contactus{
+    width:150px;
+    height:260px;
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
+color: #DEE2E6;
+box-sizing: border-box;
+}
+#popularcar-title1,#popularcar-title2{
+    font-size: 22px;
+    color: white;
+}
+hr{
+    width: 100%;
+    height: 0.6px;
+    background: #E2ECEE;
+  
+}
+.foot-2{
+    width: 100%;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+// .custom-dialog-content {
+//     background-color: black;
+//     color: white;
+//   }
+::ng-deep .mat-mdc-dialog-container{
+    --mdc-dialog-container-color:white;
+
+}
+// media query for header
+
+@media (max-width: 768px) {
+
+    #sidebar-icon{
+        display: block;
+    }
+    .menu-bar,.contactandsignup{
+        display: none;
+    }
+    .header,.footer{
+        padding:15px;
+    }
+    #logo{
+        width:70px;
+        height:70px;
+    }
+    .foot-1{
+        display: flex;
+        flex-direction: column;
+        gap:35px;
+        height: auto;
+    }
+    .car-brand,.contactus,.site-details,.overview{
+        width:100%;
+        height: auto;
+    }
+    hr{
+        margin-top:20px;
+    }
+    #copy-right{
+        font-size: 12px;
+        text-wrap:wrap;
+    }
+}
