@@ -1,0 +1,284 @@
+<html>
+
+<body>
+    <div class="main-container">
+<div class="sub-container">
+    
+<!-- location -->
+        <div class="filter-box">
+            <div class="selected-filter">Filter By</div>
+        <div class="dropdown-container">
+            <div (click)="toggleLocationDropdown()" class="dropdown-head">
+                <img *ngIf="!showLocationDropdown" src="../../assets/rightsidearrowicon.svg">
+                <img *ngIf="showLocationDropdown" src="../../assets/downarrowicon1.svg">
+                <p>Location</p>
+                </div>
+                <div *ngIf="showLocationDropdown" class="dropdown-list">
+                     
+                    <!-- search -->
+                 
+                      
+                    </div>
+                    </div>
+                    
+                    <!-- model year -->
+                    
+                    <div class="dropdown-container">
+                        <div (click)="toggleModelYearDropdown()" class="dropdown-head">
+                            <img *ngIf="!showModelYearDropdown" src="../../assets/rightsidearrowicon.svg">
+                            <img *ngIf="showModelYearDropdown" src="../../assets/downarrowicon1.svg">
+                            <p>Model year</p>
+                        </div>
+                        <div *ngIf="showModelYearDropdown" class="dropdown-list">
+                            <!-- slider -->
+                            <div class="slider-container">
+                                <div class="year-display">
+                                  {{ selectedYear  }} - {{ endYear }}
+                                </div>
+                                <input
+                                  type="range"
+                                  id="yearSlider"
+                                  min="{{ startYear }}"
+                                  max="{{ endYear }}"
+                                  step="1"
+                                  value="{{ selectedYear }}"
+                                  (input)="updateYearDisplay()"
+                                />
+                              </div>
+                         </div>
+                       
+                        </div>
+                        <!-- kilometer    -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleKmDropdown()" class="dropdown-head">
+                                <img *ngIf="!showKmDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showKmDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Kilometer driven</p>
+                            </div>
+                            <div *ngIf="showKmDropdown" class="dropdown-list">
+                                <div class="slider-container">
+                                    <div class="year-display">
+                                      {{ selectedKm  }} - {{ endKm }}& above
+                                    </div>
+                                    <input
+                                      type="range"
+                                      id="kmSlider"
+                                      min="{{ startKm }}"
+                                      max="{{ endKm }}"
+                                      step="1"
+                                      value="{{ selectedKm }}"
+                                      (input)="updateKmDisplay()"
+                                    />
+                                  </div>
+                            </div>
+                           
+                        </div>
+                        <!-- budget -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleBudgetDropdown()" class="dropdown-head">
+                                <img *ngIf="!showBudgetDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showBudgetDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Budget</p>
+                            </div>
+                            <div *ngIf="showBudgetDropdown" class="dropdown-list">
+                                <div class="slider-container">
+                                    <div class="year-display">
+                                        ₹{{ selectedBudget  }} - ₹{{ endBudget}}
+                                    </div>
+                                    <input
+                                      type="range"
+                                      id="budgetSlider"
+                                      min="{{ startBudget }}"
+                                      max="{{ endBudget }}"
+                                      step="1"
+                                      value="{{ selectedBudget }}"
+                                      (input)="updateBudgetDisplay()"
+                                    />
+                                  </div>
+                            </div>
+                           
+                        </div>
+                        <!-- fuel -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleFuelDropdown()" class="dropdown-head">
+                                <img *ngIf="!showFuelDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showFuelDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Fuel</p>
+                            </div>
+                            <div *ngIf="showFuelDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Petrol</p>
+                              
+                            </div>
+                            <div *ngIf="showFuelDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Diesel</p>
+                               
+                            </div>
+                            <div *ngIf="showFuelDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">CNG</p>
+                             
+                            </div>
+                            <div *ngIf="showFuelDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname"> Bio-Diesel</p>
+                             
+                            </div>
+                            <div *ngIf="showFuelDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Liquid Petroleum Gas</p>
+                             
+                            </div>
+                           
+                        </div>
+                        <!-- model    -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleModelDropdown()" class="dropdown-head">
+                                <img *ngIf="!showModelDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showModelDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Model</p>
+                            </div>
+                            <div *ngIf="showModelDropdown">
+                            <input type="text" id="model-search" placeholder="search"/>
+                            <div  class="dropdown-list">
+                               
+                                <input type="checkbox">
+                                <p id="productname">Full Sleeves</p>
+                                <p>(2)</p>
+                            </div>
+                        </div>
+                            <div *ngIf="showModelDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">T-shirt</p>
+                                <p>(1)</p>
+                            </div>
+                        </div>
+
+                        <!-- Body type -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleBodyDropdown()" class="dropdown-head">
+                                <img *ngIf="!showBodyDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showBodyDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Body type</p>
+                            </div>
+                            <div *ngIf="showBodyDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Hatch back</p>
+                               
+                            </div>
+                            <div *ngIf="showBodyDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">SUV</p>
+                           
+                            </div>
+                            <div *ngIf="showBodyDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">MUV</p>
+                           
+                            </div>
+                            <div *ngIf="showBodyDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Sedan</p>
+                           
+                            </div>
+                        </div>
+                        <!-- Seating capacity -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleSeatingDropdown()" class="dropdown-head">
+                                <img *ngIf="!showSeatingDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showSeatingDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Seating capacity</p>
+                            </div>
+                            <div *ngIf="showSeatingDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">4 Seater</p>
+                             
+                            </div>
+                            <div *ngIf="showSeatingDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">5 Seater</p>
+                            
+                            </div>
+                            <div *ngIf="showSeatingDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">6 Seater</p>
+                            
+                            </div>
+                            <div *ngIf="showSeatingDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">7 Seater</p>
+                            
+                            </div>
+                            <div *ngIf="showSeatingDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">8 Seater</p>
+                            
+                            </div>
+                            <div *ngIf="showSeatingDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">9 Seater</p>
+                            
+                            </div>
+                            <div *ngIf="showSeatingDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">10 Seater</p>
+                            
+                            </div>
+                        </div>
+                        <!-- Owner -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleOwnerDropdown()" class="dropdown-head">
+                                <img *ngIf="!showOwnerDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showOwnerDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Owner</p>
+                            </div>
+                            <div *ngIf="showOwnerDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">First Owner</p>
+                              
+                            </div>
+                            <div *ngIf="showOwnerDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Second Owner</p>
+                               
+                            </div>
+                            <div *ngIf="showOwnerDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Third Owner</p>
+                               
+                            </div>
+                            <div *ngIf="showOwnerDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Fourth Owner</p>
+                               
+                            </div>
+                        </div>
+                        <!-- Transmission -->
+                        <div class="dropdown-container">
+                            <div (click)="toggleTransmissionDropdown()" class="dropdown-head">
+                                <img *ngIf="!showTransmissionDropdown" src="../../assets/rightsidearrowicon.svg">
+                                <img *ngIf="showTransmissionDropdown" src="../../assets/downarrowicon1.svg">
+                                <p>Transmission</p>
+                            </div>
+                            <div *ngIf="showTransmissionDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Manual</p>
+                           
+                            </div>
+                            <div *ngIf="showTransmissionDropdown" class="dropdown-list">
+                                <input type="checkbox">
+                                <p id="productname">Automatic</p>
+                               
+                            </div>
+                        </div>
+
+
+     </div>
+
+  
+    </div>
+    </div>
+</body>
+
+</html>

@@ -11,7 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './share.service';
 import { FormsModule } from '@angular/forms';
 import { CarOverviewComponent } from './car-overview/car-overview.component';
-
+import { FilterNavComponent } from './filter-nav/filter-nav.component';
+import {MatSliderModule} from '@angular/material/slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { CarOverviewComponent } from './car-overview/car-overview.component';
     SidebarComponent,
     SignupPopupComponent,
     CarOverviewComponent,
+    FilterNavComponent,
     
    
   ],
@@ -28,7 +30,8 @@ import { CarOverviewComponent } from './car-overview/car-overview.component';
     BrowserAnimationsModule,
     MatDialogModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatSliderModule
     
   ],
   providers: [SharedService],
